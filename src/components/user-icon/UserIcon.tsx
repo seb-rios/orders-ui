@@ -17,7 +17,7 @@ const UserIcon: React.FC<UserIconProps> = ({ userName, onClick }) => {
 
   return (
     <div
-      className="flex items-center justify-center w-16 h-16 bg-blue-500 text-white text-xl font-bold rounded-full cursor-pointer transform transition-transform duration-300 hover:scale-110"
+      className="flex items-center justify-center w-10 h-10 bg-blue-500 text-white text-xl font-bold rounded-full cursor-pointer transform transition-transform duration-300 hover:scale-110"
       onClick={onClick}
     >
       {getInitials(userName)}

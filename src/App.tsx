@@ -1,13 +1,18 @@
 import React from "react";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home/Home";
+import OrdersPage from "./pages/orders/Orders";
+import Layout from "./components/layout/Layout";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <HomePage />
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="ordenes" element={<OrdersPage />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

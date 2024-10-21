@@ -1,7 +1,6 @@
 import React from "react";
 import OrderContainer from "../../sections/orders-section/OrdersSection";
 import { Order, Status } from "../../types/order";
-import NavBar from "../../components/navbar/NavBar";
 
 //sample data
 const orders: Order[] = [
@@ -90,12 +89,7 @@ const orders: Order[] = [
 const HomePage = () => {
   return (
     <div className="flex">
-      <NavBar />
-
-      <div className="flex-1 p-4 ml-64">
-        <h1 className="text-2xl font-bold mb-4">Manejo de Ordenes</h1>
-        <OrderContainer orders={orders} />
-      </div>
+      <OrderContainer orders={orders} />
     </div>
   );
 };

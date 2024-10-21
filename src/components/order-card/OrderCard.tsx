@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../card/Card";
-import { Order, Status } from "../../types/order";
+import { Order } from "../../types/order";
 
 interface OrderCardProps {
   order: Order;
