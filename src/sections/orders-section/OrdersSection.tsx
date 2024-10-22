@@ -2,11 +2,11 @@ import React from "react";
 import OrderCard from "../../components/order-card/OrderCard"; // Assume you're using DaisyUI card in OrderCard
 import { Order } from "../../types/order";
 
-interface OrderContainerProps {
+interface OrderSectionProps {
   orders: Order[];
 }
 
-const OrderContainer: React.FC<OrderContainerProps> = ({ orders }) => {
+const OrderSection: React.FC<OrderSectionProps> = ({ orders }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-col gap-4">
@@ -22,4 +22,4 @@ const OrderContainer: React.FC<OrderContainerProps> = ({ orders }) => {
   );
 };
 
-export default OrderContainer;
+export default OrderSection;

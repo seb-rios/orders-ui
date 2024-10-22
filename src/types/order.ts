@@ -7,6 +7,7 @@ export enum Status {
 
 export interface Order {
   id: string;
+  garmentId: string;
   client: string; // Client needs to be an isolated type, string for now!
   quantity: string;
   status: Status;

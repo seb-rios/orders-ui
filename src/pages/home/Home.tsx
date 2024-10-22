@@ -1,95 +1,11 @@
 import React from "react";
-import OrderContainer from "../../sections/orders-section/OrdersSection";
-import { Order, Status } from "../../types/order";
-
-//sample data
-const orders: Order[] = [
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-  {
-    id: "12345",
-    client: "BAC Costa Rica",
-    quantity: "100",
-    status: Status.IN_PROFRESS,
-    receivedDate: new Date(),
-    completedDate: new Date(),
-    deliveryDate: new Date(),
-    totalProcessingTime: 48,
-  },
-];
+import OrderSection from "../../sections/orders-section/OrdersSection";
+import { orders } from "../../constants/test";
 
 const HomePage = () => {
   return (
     <div className="flex">
-      <OrderContainer orders={orders} />
+      <OrderSection orders={orders} />
     </div>
   );
 };
