@@ -13,9 +13,10 @@ const OrderSection: React.FC<OrderSectionProps> = ({ orders }) => {
         <h2 className="text-3xl font-bold px-4">Órdenes</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {orders.slice(0, 4).map((order, index) => (
-            <OrderCard key={index} order={order} />
-          ))}
+          {orders &&
+            orders.map((order, index) => (
+              <OrderCard key={index} order={order} />
+            ))}
         </div>
       </div>
     </div>

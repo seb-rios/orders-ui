@@ -6,9 +6,7 @@ import { Button, MenuItem, ListItemIcon } from "@mui/material";
 import { DocumentScanner, Send } from "@mui/icons-material";
 import { columnsOrder } from "../../constants";
 
-interface OrderTableProps {}
-
-const OrderTable: React.FC<{ orders: Order[] }> = ({ orders }) => {
+const OrderTable: React.FC<{ orders: Order[] | [] }> = ({ orders }) => {
   const columns = useMemo<MRT_ColumnDef<Order>[]>(() => columnsOrder, []);
 
   const renderRowActions = ({ row, closeMenu }: any) => {

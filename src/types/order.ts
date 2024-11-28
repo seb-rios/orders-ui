@@ -6,13 +6,18 @@ export enum Status {
 }
 
 export interface Order {
-  id: string;
-  garmentId: string;
-  client: string; // Client needs to be an isolated type, string for now!
-  quantity: string;
-  status: Status;
-  receivedDate: Date;
-  completedDate: Date;
-  deliveryDate: Date;
-  totalProcessingTime: number;
+  order_id: string;
+  garment_name: string;
+  style_desc: string;
+  prod_name: string;
+  prod_status: Status;
+  client_name: string;
+  created: string;
+  updated: string;
+  // TODO: all of this attributes need to be added to store procedure
+  // quantity: string;
+  // receivedDate: Date;
+  // completedDate: Date;
+  // deliveryDate: Date;
+  // totalProcessingTime: number;
 }
