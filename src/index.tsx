@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { PreferencesProvider } from "./context/Preferences";
+import { ModalProvider } from "./context/ModalContext";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
@@ -15,9 +16,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <PreferencesProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <ModalProvider>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </ModalProvider>
       </PreferencesProvider>
     </BrowserRouter>
   </React.StrictMode>

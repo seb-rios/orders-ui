@@ -1,16 +1,15 @@
-export enum Status {
-  COMPLETED = "Completado",
-  IN_PROFRESS = "En Proceso",
-  PENDING = "Pendiente",
-  CANCELLED = "Cancelado",
+export interface Status {
+  id: string;
+  name: string;
 }
 
 export interface Order {
   order_id: string;
   garment_name: string;
+  order_quantity: string;
   style_desc: string;
   prod_name: string;
-  prod_status: Status;
+  prod_status: string;
   client_name: string;
   created: string;
   updated: string;

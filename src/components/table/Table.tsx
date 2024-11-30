@@ -18,6 +18,7 @@ interface TableProps<TData extends MRT_RowData> {
     row: any;
     table: any;
   }) => JSX.Element[];
+  customActions?: (propa: { table: any }) => JSX.Element;
 }
 
 const Table = <TData extends MRT_RowData>({
@@ -25,6 +26,7 @@ const Table = <TData extends MRT_RowData>({
   data,
   enableRowActions,
   renderRowActions,
+  customActions,
 }: TableProps<TData>) => {
   const theme = useTheme();
 
@@ -42,9 +44,19 @@ const Table = <TData extends MRT_RowData>({
         enableRowSelection={true}
         renderTopToolbarCustomActions={({ table }) => (
           <Box
-            sx={{ flexGrow: 1, display: "flex", justifyContent: "flex-start" }}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+            }}
           >
-            <GlobalFilterTextField table={table} />
+            <Box>
+              <GlobalFilterTextField table={table} />
+            </Box>
+
+            {customActions && (
+              <Box sx={{ ml: 2 }}>{customActions({ table })}</Box>
+            )}
           </Box>
         )}
       />

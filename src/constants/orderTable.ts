@@ -13,7 +13,7 @@ export const columnsOrder: MRT_ColumnDef<Order>[] = [
     size: 100,
   },
   {
-    accessorKey: "quantity",
+    accessorKey: "order_quantity",
     header: "Cantidad",
     size: 50,
   },

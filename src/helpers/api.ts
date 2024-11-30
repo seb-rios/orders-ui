@@ -4,7 +4,7 @@ export const apiCall = async (
   body: any = null,
   headers = {}
 ) => {
-  const baseUrl = "http://localhost:8080/"; // Replace with your backend URL
+  const baseUrl = "http://localhost:8080/api/v1/"; // Replace with your backend URL
 
   try {
     const response = await fetch(`${baseUrl}${endpoint}`, {

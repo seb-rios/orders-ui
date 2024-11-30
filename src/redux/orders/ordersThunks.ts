@@ -12,7 +12,7 @@ export const fetchOrders = createAsyncThunk(
         dispatch(setOrders(orders));
       }
     } catch (error) {
-      console.error("ordersThunks: Error while setting orders", error);
+      console.error("ordersThunks: Error while setting orders! ", error);
     }
   }
 );
